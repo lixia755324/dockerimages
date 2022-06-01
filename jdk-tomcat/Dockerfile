@@ -7,7 +7,7 @@ FROM inikolaev/jdk:latest
 # Preparation
 
 ENV TOMCAT_MAJOR 8
-ENV TOMCAT_VERSION 8.0.35
+ENV TOMCAT_VERSION 8.5.79
 ENV TOMCAT_HOME /etc/tomcat-${TOMCAT_VERSION}
 
 # Installation
