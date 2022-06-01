@@ -13,11 +13,9 @@ ENV TOMCAT_HOME /etc/tomcat-${TOMCAT_VERSION}
 # Installation
 
 RUN cd /tmp
-# RUN wget https://www.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR}/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz
 RUN mkdir tomcat-${TOMCAT_VERSION}
 RUN tar -zxvf apache-tomcat-${TOMCAT_VERSION}.tar.gz --directory tomcat-${TOMCAT_VERSION} --strip-components=1
 RUN mv tomcat-${TOMCAT_VERSION} ${TOMCAT_HOME}
-# RUN wget https://raw.githubusercontent.com/lixia755324/dockerimages/main/jdk-tomcat/index.jsp
 RUN mkdir ${TOMCAT_HOME}/webapps/search
 RUN mv index.jsp ${TOMCAT_HOME}/webapps/search
 ENV CATALINA_HOME ${TOMCAT_HOME}
